@@ -19,8 +19,6 @@ public class Main {
 
         */
 
-        // Print Hello World! statement
-        System.out.println("Hello world!");
 
         Denomination hundred = new Denomination("One Hundred Note", 100, "bill", "img.png"  );
         Denomination fifty = new Denomination("Fifty Note", 50, "bill", "img.png"  );
