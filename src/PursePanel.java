@@ -29,35 +29,24 @@ public class PursePanel extends JPanel {
 
     public void setText(String input){
 
+        this.setPreferredSize(new Dimension(700, 700));
+        this.setBackground(Color.WHITE);
 
+        JLabel label = new JLabel("Hello World");
 
-
-            this.setPreferredSize(new Dimension(700, 700));
-            this.setBackground(Color.WHITE);
-
-            JLabel label = new JLabel("Hello World");
-
-            label.setFont(new Font("Serif", Font.BOLD, 50));
-            label.setForeground(Color.BLUE);
-
-
-
+        label.setFont(new Font("Serif", Font.BOLD, 50));
+        label.setForeground(Color.BLUE);
 
         this.add(label);
 
         ImageIcon img = new ImageIcon( "image/penny.png");
 
-
-
     }
-
-
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        //Purse purse = new Purse();
-
+        Purse purse = new Purse();
 
     }
 }

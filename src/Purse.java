@@ -14,7 +14,7 @@ public class Purse {
         cash.put(type, cash.getOrDefault(type, 0) + num);
     }
 
-    //Remove function - not used
+    //Remove function - not used yet
     public double remove(Denomination type, int num) {
         if (cash.containsKey(type) && cash.get(type) >= num) { // if input
             cash.put(type, cash.get(type) - num);
@@ -24,7 +24,6 @@ public class Purse {
         }
     }
 
-
     public double getValue(int i) {
         double total = 0.0;
         for (Map.Entry<Denomination, Integer> entry : cash.entrySet()) {
@@ -33,7 +32,6 @@ public class Purse {
         }
         return total;
     }
-
 
     public String toString() {
         StringBuilder sb = new StringBuilder();

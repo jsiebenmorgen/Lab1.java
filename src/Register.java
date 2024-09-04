@@ -48,7 +48,6 @@ public class Register {
     public static void main(String[] args) {
         Register register = new Register();
 
-
         double cashInput;
 
         System.out.print("Please enter a Dollar & Cent Value: " );
@@ -60,7 +59,6 @@ public class Register {
         Purse change = register.makeChange(cashInput);
 
         System.out.println("Change for " + cashInput + " is: \n" + change);
-
 
 
     }
