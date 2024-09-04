@@ -4,24 +4,28 @@ import java.util.Map;
 public class Purse {
     private Map<Denomination, Integer> cash;
 
+    //Constructor
     public Purse() {
         cash = new HashMap<>();
     }
 
+    //Adds to the total number of a given denomination
     public void add(Denomination type, int num) {
         cash.put(type, cash.getOrDefault(type, 0) + num);
     }
 
+    //Remove function - not used
     public double remove(Denomination type, int num) {
-        if (cash.containsKey(type) && cash.get(type) >= num) {
+        if (cash.containsKey(type) && cash.get(type) >= num) { // if input
             cash.put(type, cash.get(type) - num);
             return type.amt() * num; // Return the amount removed
         } else {
-            return 0.0; // No such denomination or not enough
+            return 0.0; // Else no such denomination exists
         }
     }
 
-    public double getValue() {
+
+    public double getValue(int i) {
         double total = 0.0;
         for (Map.Entry<Denomination, Integer> entry : cash.entrySet()) {
             Denomination denom = entry.getKey();
