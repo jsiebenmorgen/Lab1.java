@@ -1,8 +1,2 @@
-enum DenominationForm {
-    BILL,
-    COIN;
-}
-
-public record Denomination (String name, double amt, DenominationForm form, String img) {
-
+public record Denomination(String name, double amt, String form, String img) {
 }
